@@ -17,4 +17,5 @@ Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 UrlDownload = "856ac37a-3032-4c1c-9122-f86d88358c8b"
 
 [compat]
+Reexport = "1"
 julia = "1"
