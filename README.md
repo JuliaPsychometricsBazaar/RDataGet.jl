@@ -16,5 +16,5 @@ After installing the RDataGet package, you can then load data sets using the
 arguments:
 
     using RDataGet
-    iris = dataset("datasets", "iris")
+    harman_political = dataset("psych", "Harman.political")
     neuro = dataset("boot", "neuro")
