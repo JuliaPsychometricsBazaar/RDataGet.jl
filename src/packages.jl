@@ -8,6 +8,9 @@ end
 
 function get_package(package_name, cran_mirror=default_cran_mirror)
     verlookup = available_packages()
+    if !(package_name in keys(verlookup))
+        error("Could not find '$package_name' on CRAN")
+    end
     version = verlookup[package_name]
     tgz_name = package_name * "_" * version * ".tar.gz"
     url = cran_mirror * "src/contrib/" * tgz_name
