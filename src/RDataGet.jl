@@ -12,11 +12,12 @@ using CodecBzip2
 using CodecXz
 @reexport using DataFrames
 
-export dataset, datasets
+export dataset, datasets, cran_arrow_artifact
 
 include("cran.jl")
 include("packages.jl")
 include("datasets.jl")
 include("dataset.jl")
+include("artifacts.jl")
 
 end

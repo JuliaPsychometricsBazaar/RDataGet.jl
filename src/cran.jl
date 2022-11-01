@@ -1,19 +1,24 @@
 using UrlDownload
 
 
+function parse_description(description)
+    name = nothing
+    version = nothing
+    for line in split(description, "\n")
+        if startswith(line, "Package: ")
+            name = split(line, ": ")[2]
+        elseif startswith(line, "Version: ")
+            version = split(line, ": ")[2]
+        end
+    end
+    return name, version
+end
+
 function parse_packages(packages)
     packages = String(packages)
     verlook = Dict()
-    for package in split(packages, "\n\n")
-        name = nothing
-        version = nothing
-        for line in split(package, "\n")
-            if startswith(line, "Package: ")
-                name = split(line, ": ")[2]
-            elseif startswith(line, "Version: ")
-                version = split(line, ": ")[2]
-            end
-        end
+    for description in split(packages, "\n\n")
+        name, version = parse_description(description)
         if name !== nothing && version !== nothing
             verlook[name] = version
         end
