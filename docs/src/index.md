@@ -4,11 +4,22 @@ CurrentModule = RDataGet
 
 # RDataGet
 
-Documentation for [RDataGet](https://github.com/frankier/RDataGet.jl).
+This page contains the documentation for
+[RDataGet](https://github.com/frankier/RDataGet.jl).
 
-```@index
+```@docs
+RDataGet
 ```
+
+## Exported functions
 
 ```@autodocs
 Modules = [RDataGet]
+Private = false
+Order = [:function]
+```
+
+## Index
+
+```@index
 ```

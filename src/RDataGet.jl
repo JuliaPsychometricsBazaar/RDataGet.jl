@@ -1,3 +1,6 @@
+"""
+$(README)
+"""
 module RDataGet
 
 if isdefined(Base, :Experimental) && isdefined(Base.Experimental, Symbol("@optlevel"))
@@ -11,8 +14,15 @@ using CodecZlib
 using CodecBzip2
 using CodecXz
 @reexport using DataFrames
+using DocStringExtensions
 
 export dataset, datasets, cran_arrow_artifact
+
+@template (FUNCTIONS, METHODS, MACROS) =
+    """
+    $(TYPEDSIGNATURES)
+    $(DOCSTRING)
+    """
 
 include("cran.jl")
 include("packages.jl")

@@ -3,8 +3,9 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://frankier.github.io/RDataGet.jl/dev/)
 [![Build Status](https://github.com/frankier/RDataGet.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/frankier/RDataGet.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
-Alternative to [RDatasets.jl](https://github.com/JuliaStats/RDatasets.jl/)
-which simply grabs datasets directly from CRAN.
+RDataGet gets tabular R datasets from CRAN. It is an alternative to
+[RDatasets.jl](https://github.com/JuliaStats/RDatasets.jl/), working on demand,
+rather than bundling data.
 
 The basic usage is similar to `RDatasets.jl`. You can install it as follows:
 

@@ -1,5 +1,11 @@
 using UrlDownload
 
+const default_cran_mirror = "https://cloud.r-project.org/"
+
+const cran_mirror_doc = """
+An alternative `cran_mirror` can be specified, by default `default_cran_mirror=
+"$(default_cran_mirror)"` is used.
+"""
 
 function parse_description(description)
     name = nothing

@@ -2,6 +2,14 @@ function datasets_from_pkg_dir(pkg_dir)
     [rsplit(pth, "."; limit=2)[1] for pth in readdir(pkg_dir) if occursin(r"\.rda$|\.RData|\.csv.gz", pth)]
 end
 
+"""
+Lists the datasets found in the data directory of the `package_name` R package
+along with some basic metadata in a DataFrame.
+
+$(cran_mirror_doc)
+
+This will currently cause all datasets in the package to be cached.
+"""
 function datasets(package_name, cran_mirror=default_cran_mirror)
     package_dir = get_package_cached(package_name, cran_mirror)
     datasets = datasets_from_pkg_dir(package_dir)

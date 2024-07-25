@@ -5,10 +5,16 @@ using DataFrames
 using CSV
 using CodecZlib
 
+"""
+Tries to find `dataset_name` the data directory of the R package
+`package_name`. The data table is loaded directly from an RData or CSV file in
+package source. Sometimes, not all columns can be successfully typed from CSVs,
+and so `types` can be provided which will be passed to `CSV.File`.
 
-const default_cran_mirror = "https://cloud.r-project.org/"
+$(cran_mirror_doc)
 
-
+After first load, the data will be cached as an arrow file.
+"""
 function dataset(package_name, dataset_name, types=nothing, cran_mirror=default_cran_mirror)
     return DataFrame(table_from_data_dir(get_package_cached(package_name, cran_mirror), dataset_name, types))
 end
