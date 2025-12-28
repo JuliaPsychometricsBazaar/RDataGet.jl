@@ -1,7 +1,7 @@
 name = "RDataGet"
 uuid = "a115732e-4334-4ecb-8ea3-f683e7f66d4d"
 authors = ["Frankie Robertson <frankie@robertson.name> and contributors"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
