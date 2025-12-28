@@ -1,6 +1,6 @@
 # RDataGet
 
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://frankier.github.io/RDataGet.jl/dev/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliapsychometricsbazaar.github.io/RDataGet.jl/dev/https://frankier.github.io/RDataGet.jl/dev/)
 [![Build Status](https://github.com/frankier/RDataGet.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/frankier/RDataGet.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 RDataGet gets tabular R datasets from CRAN. It is an alternative to
@@ -9,15 +9,19 @@ rather than bundling data.
 
 The basic usage is similar to `RDatasets.jl`. You can install it as follows:
 
-    Pkg.add(url="https://github.com/frankier/RDataGet.jl.git")
+```julia
+    Pkg.add("RDataGet")
+```
 
 After installing the RDataGet package, you can then load data sets using the
 `dataset()` function, which takes the name of a package and a data set as
 arguments:
 
+```julia
     using RDataGet
     harman_political = dataset("psych", "Harman.political")
     neuro = dataset("boot", "neuro")
+```
 
 ## Limitations
 
