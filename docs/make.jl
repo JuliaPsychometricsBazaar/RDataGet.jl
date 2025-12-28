@@ -6,11 +6,11 @@ DocMeta.setdocmeta!(RDataGet, :DocTestSetup, :(using RDataGet); recursive=true)
 makedocs(;
     modules=[RDataGet],
     authors="Frankie Robertson <frankie@robertson.name> and contributors",
-    repo="https://github.com/frankier/RDataGet.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/JuliaPsychometricsBazaar/RDataGet.jl/blob/{commit}{path}#{line}",
     sitename="RDataGet.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://frankier.github.io/RDataGet.jl",
+        canonical="https://JuliaPsychometricsBazaar.github.io/RDataGet.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -20,6 +20,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/frankier/RDataGet.jl",
+    repo="github.com/JuliaPsychometricsBazaar/RDataGet.jl",
     devbranch="main",
 )
