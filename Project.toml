@@ -1,7 +1,10 @@
 name = "RDataGet"
 uuid = "a115732e-4334-4ecb-8ea3-f683e7f66d4d"
-authors = ["Frankie Robertson <frankie@robertson.name> and contributors"]
 version = "0.1.1"
+authors = ["Frankie Robertson <frankie@robertson.name> and contributors"]
+
+[workspace]
+projects = ["docs", "test"]
 
 [deps]
 Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
@@ -22,17 +25,17 @@ Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 UrlDownload = "856ac37a-3032-4c1c-9122-f86d88358c8b"
 
 [compat]
+Arrow = "2.8.1"
 CSV = "0.10"
 CodecBzip2 = "0.8"
 CodecXz = "0.7"
 CodecZlib = "0.7"
 DataFrames = "1"
+DocStringExtensions = "0.9.5"
 FileTypes = "0.1.0"
+OhMyArtifacts = "0.3.1"
 RData = "0.8, 1"
 Reexport = "1"
 Tables = "1.12.1"
 UrlDownload = "1"
 julia = "1.12"
-
-[workspace]
-projects = ["docs", "test"]
